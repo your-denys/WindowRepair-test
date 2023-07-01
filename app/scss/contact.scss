@@ -1,0 +1,53 @@
+.contact {
+  background-image: url('../img/src/home-wine.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  background-repeat: no-repeat;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  &__title {
+    font-size: 34px;
+    text-align: right;
+    font-weight: bold;
+    margin-top: 40px;
+  }
+  &__subtitle {
+    margin-top: 20px;
+    line-height: 28px;
+    text-align: right;
+    font-size: 23px;
+    margin-left: auto;
+    width: 50%;
+  }
+  &__info {
+    width: 50%;
+    margin-top: 20px;
+    margin-left: auto;
+    p {
+      text-align: right;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .contact {
+    background-position: center right -250px;
+    &__title {
+      font-size: 28px;
+      margin-top: 20px;
+    }
+    &__subtitle {
+      line-height: 25px;
+      font-size: 20px;
+      width: 70%;
+    }
+    &__info {
+      width: 60%;
+      p {
+        text-align: right;
+      }
+    }
+  }
+}

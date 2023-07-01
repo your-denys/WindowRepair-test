@@ -1,0 +1,64 @@
+.menu {
+  background-image: url('../img/src/home-wine.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  background-repeat: no-repeat;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  &__title {
+    color: $text;
+    font-family: 'montserrat';
+    font-size: 34px;
+    text-align: right;
+    font-weight: bold;
+    margin-top: 25x;
+    margin-bottom: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  &__wrapper {
+    margin: 0 auto 20px;
+    width: 60vw;
+    & div {
+      background-color: transparent;
+      border: none;
+    }
+    & p {
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+  }
+  &__description {
+    padding: 10px, 1.25rem;
+  }
+  & button {
+    background-color: transparent;
+    color: $text;
+    font-family: 'cinzel';
+    border-bottom: 1px solid;
+    &:not(.collapsed) {
+      background-color: transparent;
+      color: $text;
+    }
+    &:focus {
+      border-color: #fff;
+      box-shadow: none
+    }
+    &::after {
+      display: none !important;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .menu {
+    background-position: center right -250px;
+    &__title {
+      font-size: 28px;
+      margin-top: 20px;
+    }
+    &__wrapper {
+      margin: 0 auto 20px;
+      width: 100%;
+  }
+}
+}

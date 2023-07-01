@@ -1,0 +1,51 @@
+.home {
+  background-image: url('../img/src/home-wine.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  background-repeat: no-repeat;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  &__main {
+    margin-top: 40px;
+  }
+  &__content {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 3rem;
+  }
+
+  &__text {
+    width: 45%;
+    & p {
+      font-size: 21px;
+      font-family: 'montserrat';
+      line-height: 27px;
+      text-shadow: 1px 1px 1px #000000;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .home {
+    background-position: center right -250px;
+    &__main {
+      margin-top: 20px;
+    }
+    &__content {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 3rem;
+    }
+
+    &__text {
+      width: 60%;
+      & p {
+        font-size: 14px;
+        font-family: 'montserrat';
+        line-height: 22px;
+      }
+    }
+  }
+}

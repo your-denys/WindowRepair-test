@@ -1,0 +1,26 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  &__reservation {
+    padding: 12px 26px;
+    background-color: $text;
+    color: $background;
+    font-size: 24px;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid transparent;
+    font-family: 'montserrat';
+    &:hover {
+      background-color: $accent;
+      color: $background;
+    }
+  }
+}
+  @media screen and (max-width: 768px) {
+    .header {
+      &__reservation {
+        padding: 8px 18px;
+        font-size: 22px;
+      }
+    }
+}

@@ -1,0 +1,116 @@
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+
+  &__hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+
+  &__line {
+    width: 30px;
+    height: 2px;
+    background-color: $text !important;
+    margin-bottom: 6px;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &__menu {
+    display: flex;
+    list-style: none;
+  }
+
+  &__menu li {
+    text-align: right;
+    margin-right: 35px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 100%;
+            border-bottom: 1px solid rgb(255, 255, 255);
+        }
+    }
+}
+&__menu--active {
+    opacity: 0.8;
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        width: 100%;
+        border-bottom: 1px solid rgb(255, 255, 255);
+    }
+}
+
+  &__menu li a {
+    text-decoration: none;
+    color: $text;
+    font-size: 20px;
+    font-family: 'montserrat';
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navigation {
+    &__hamburger {
+      display: flex;
+    }
+
+    &__menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 45%;
+      height: 100vh;
+      flex-direction: column;
+      background-color: rgba(0, 0, 0, 0.884);
+      padding: 20px;
+      transition: right 0.3s ease-in-out;
+      z-index: 9999;
+      & li {
+          margin-top: 20px ;
+      }
+    }
+
+    &__menu.active {
+      right: 0;
+    }
+    &__menu--active {
+        opacity: 0.8;
+        &::after {
+            width: 0%;
+        }
+    }
+    &__menu li:hover::after {
+      display: none;
+    }
+    &__line {
+        background-color: #333;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    &__line:nth-child(2) {
+      transform-origin: center;
+    }
+  }
+  .navigation__hamburger.active .navigation__line:first-child {
+    transform: translateY(9px) rotate(45deg);
+  }
+
+  .navigation__hamburger.active .navigation__line:nth-child(2) {
+    transform: scaleX(0);
+  }
+
+  .navigation__hamburger.active .navigation__line:last-child {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+}

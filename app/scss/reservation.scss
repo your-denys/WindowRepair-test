@@ -1,0 +1,61 @@
+.reservation {
+    background-image: url('../img/src/home-wine.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-repeat: no-repeat;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    &__title {
+      color: $text;
+      font-family: 'montserrat';
+      font-size: 34px;
+      text-align: center;
+      font-weight: bold;
+      margin-top: 25px;
+      margin-bottom: 0;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    & form {
+      background-color: transparent;
+      width: 40vw;
+      margin: 0 auto;
+    }
+  
+    & label {
+      color: white;
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      font-family: 'montserrat';
+    }
+  
+    & input,
+    & textarea {
+      font-family: 'montserrat';
+      background-color: rgba(255, 255, 255, 0.151);
+      color: white;
+      border: none;
+      padding: 10px;
+      margin-bottom: 10px;
+      width: 100%;
+    }
+  
+    & input[type="submit"] {
+      background-color: white;
+      color: black;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+  
+    & input[type="submit"]:hover {
+      background-color: #f0f0f0;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .reservation {
+      background-position: center right -250px;
+    }
+  }

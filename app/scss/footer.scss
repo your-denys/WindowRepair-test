@@ -1,0 +1,25 @@
+.footer {
+    margin-top: auto;
+    padding: 15px 0;
+    background-color: #ffffff;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__rights {
+        color: $background;
+        font-size: 14px;
+    }
+    & article {
+        width: 50%;
+        display: flex;
+        align-items: center;
+    }
+    &__text {
+       justify-content: flex-start;
+    }
+    &__media {
+       justify-content: flex-end;
+       gap: 10px;
+    }
+}

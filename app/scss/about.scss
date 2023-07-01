@@ -1,0 +1,158 @@
+.about {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: $text;
+  &__bg {
+    position: absolute;
+    height: 97vh;
+    width: 100vw;
+    background-image: url('../img/src/home-wine.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    top: 0;
+  }
+  &__history {
+    height: 80vh;
+    & h2 {
+      font-size: 34px;
+      text-align: right;
+      font-weight: bold;
+      margin-top: 40px;
+      font-family: 'cinzel';
+    }
+    & p {
+      margin-top: 20px;
+      line-height: 28px;
+      text-align: right;
+      font-size: 20px;
+      margin-left: auto;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+  }
+  &__mission {
+    align-content: center;
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+    padding-top: 40px;
+    gap: 30px;
+    & article {
+      width: 50%;
+      overflow: hidden;
+    }
+    & h2 {
+      color: #000;
+      font-family: 'cinzel';
+      font-size: 34px;
+      font-weight: bold;
+    }
+    & p {
+      color: #000;
+      margin-top: 50px;
+      line-height: 28px;
+      font-size: 20px;
+    }
+    &-img {
+      height: 80vh;
+    }
+  }
+  &__team {
+    margin-bottom: 30px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &-title {
+      color: #000;
+      font-family: 'cinzel';
+      font-size: 34px;
+      font-weight: bold;
+      text-align: center;
+    }
+    &-text {
+      color: #000;
+      margin-top: 30px;
+      line-height: 28px;
+      font-size: 23px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    &-img {
+      height: 400px;
+      width: 300px;
+      object-fit: cover;
+    }
+    & p {
+      color: #000;
+    }
+    & h5 {
+      padding-bottom: 8px;
+      border-bottom:1px solid #000;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about {
+    &__bg {
+      background-position: center right -250px;
+    }
+    &__history {
+      & h2 {
+        margin-top: 20px;
+        font-size: 25px;
+      }
+      & p {
+        margin-top: 0px;
+        line-height: 20px;
+        font-size: 14px;
+      }
+    }
+    &__mission {
+      align-content: center;
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: column-reverse;
+      height: auto;
+      padding-top: 40px;
+      & article {
+        width: 100%;
+        overflow: hidden;
+      }
+      & h2 {
+        margin-top: 20px;
+        font-size: 25px;
+      }
+      & p {
+        line-height: 25px;
+        font-size: 14px;
+        width: 100%;
+        margin-top: 20px;
+      }
+      &-img {
+        height: 50vh;
+      }
+    }
+    &__team {
+      margin-bottom: 30px;
+      height: auto;
+      margin-top: 50px;
+      margin-bottom: 20px;
+      & h2 {
+        margin-top: 20px;
+        font-size: 25px;
+      }
+      & p {
+        line-height: 25px;
+        font-size: 20px;
+      }
+      &-img {
+        height: auto;
+      }
+    }
+  }
+}
